@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background-color: rgb(166, 140, 140);
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 50px 0px;
+  color: white;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +44,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.list-item {
+  list-style-type: none;
 }
