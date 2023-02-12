@@ -15,6 +15,13 @@ const data = [
 
 function App() {
   const [search, setSearch] = React.useState("");
+  const [items, setItems] = React.useState(data);
+  React.useEffect(() => {
+    setItems(
+      data.filter((el) => el.toLowerCase().includes(search.toLowerCase()))
+    );
+  }, [search]);
+
   return (
     <div className="App">
       <div>
@@ -24,7 +31,7 @@ function App() {
       <Search value={search} onChange={(e) => setSearch(e.target.value)}>
         Find course:
       </Search>
-      <List items={data} />
+      <List items={items} />
     </div>
   );
 }
