@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import List from "./components/List/List";
 import { Search } from "./components/Search";
+import { useSelector } from "react-redux";
 const data = [
   "HTML",
   "CSS",
@@ -21,6 +22,8 @@ function App() {
       data.filter((el) => el.toLowerCase().includes(search.toLowerCase()))
     );
   }, [search]);
+
+  // const myData = useSelector((state) => state.mySlice.data);
 
   return (
     <div className="App">
